@@ -19,7 +19,7 @@ function handleClick(){
     return (
         <>
         
-        {!clicked && <button onClick={handleClick} className="m-4 text-9xl text-center w-screen h-screen flex items-center justify-center">Entrer</button>}
+        {!clicked && <button onClick={handleClick} className="m-4 2xl:text-9xl lg:text-7xl sm:text-5xl text-center w-screen h-screen flex items-center justify-center">Entrer</button>}
         {clicked && <Home></Home>}
         </>
     )
