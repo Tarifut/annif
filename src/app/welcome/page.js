@@ -5,7 +5,7 @@ import '../globals.css'
 
 import Confetti from 'react-confetti'
 import Image from 'next/image'
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api'
+import { GoogleMap, useJsApiLoader,Marker } from '@react-google-maps/api'
 
 import { useState,useCallback,useEffect } from 'react'
 
@@ -93,7 +93,10 @@ export default function Home() {
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
-      {/* Child components, such as markers, info windows, etc. */}
+      {<Marker
+      
+      position={center}
+    />}
       <></>
     </GoogleMap>}
       </div>
