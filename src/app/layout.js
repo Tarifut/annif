@@ -47,10 +47,10 @@ export default function RootLayout({ children }) {
         <source src="/music.mp3" type="audio/mpeg" />
       </audio>}
       
-        {showNav && <section> <Confetti /><nav className="mb-24">
+        {showNav && <section><Confetti /><nav className="mb-24 ">
           
-         
-          <ol className=" m-auto  p-4 flex w-3/4 flex-row   justify-between 2xl:text-2xl lg:text-xl sm:text-lg">
+          
+          <ol className=" m-auto  p-4 flex  flex-row   justify-between 2xl:text-2xl lg:text-xl sm:text-lg">
             <Link href="/accueil"  className= " transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300"><p>Accueil</p></Link>
             <Link href="/programme"  className= "transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300" ><p>Programme</p></Link>
             <Link href="/informations" className= "transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300" ><p>Informations</p></Link>
