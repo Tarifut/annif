@@ -1,6 +1,6 @@
 import Image from "next/image"
-import recto from "../images/invitation.png";
-import verso from "../images/invitation_site.png";
+import recto from "../images/recto.png";
+import verso from "../images/verso.png";
 export default function Programme(){
 
     return(
