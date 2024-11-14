@@ -18,9 +18,7 @@ export default function Home() {
 
   return (
     <>
-      <audio autoPlay loop>
-        <source src="/music.mp3" type="audio/mpeg" />
-      </audio>
+      
       <h1 className="m-4 2xl:text-6xl lg:text-4xl sm:text-2xl text-center">
         Anniversaire Adeline et Vincent
       </h1>
