@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
         {!showNav && <button onClick={handleEnter} className="  2xl:text-9xl lg:text-7xl sm:text-5xl text-center w-screen h-screen flex items-center justify-center"><p className=" transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300">Entrer</p></button>}
 
 {showNav && <audio autoPlay loop>
-        <source src="/9music.mp3" type="audio/mpeg" />
+        <source src="/music.mp3" type="audio/mpeg" />
       </audio>}
       
         {showNav && <section><Confetti /><nav className="mb-8 ">
