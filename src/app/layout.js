@@ -1,7 +1,11 @@
 
+'use client'
+import Link from "next/link";
 import "./globals.css";
 import localFont from "next/font/local";
-
+import { useState,useEffect } from "react";
+import Confetti from "react-confetti";
+import { useRouter } from 'next/navigation'
 
 
 
@@ -12,16 +16,46 @@ const breathing = localFont({
 });
 
 
+
+
 export default function RootLayout({ children }) {
 
+  const router = useRouter()
+
+  useEffect(() => {
+    router.push('/')
+  },[]);
+  
+
+
+  const [showNav, setshowNav] = useState(false)
+  
+
+  function handleEnter(){
+    setshowNav(true)
+    
+    }
 
   return (
     <html className="h-screen	">
 
       <body className={`p-4 w-screen	h-screen bg-black text-white ${breathing.className}  antialiased overflow-x-hidden	`}>
 
-       
-        {children}
+        {!showNav && <button onClick={handleEnter} className=" m-4 2xl:text-9xl lg:text-7xl sm:text-5xl text-center w-screen h-screen flex items-center justify-center"><p className=" transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300">Entrer</p></button>}
+
+        {showNav && <nav>
+          <Confetti />
+          <ol className=" mb-24 p-4 flex flex-row gap-44 justify-center 2xl:text-2xl lg:text-xl sm:text-lg">
+            <Link href="/accueil"  className= "transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300"><p>Accueil</p></Link>
+            <Link href="/programme"  className= "transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300" ><p>Programme</p></Link>
+            <Link href="/informations" className= "transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300" ><p>Informations</p></Link>
+          </ol>
+        </nav>
+
+
+        }
+        {showNav && children}
+
 
       </body>
     </html>
