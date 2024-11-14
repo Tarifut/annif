@@ -9,7 +9,7 @@ import Image from "next/image";
 import pola from "../images/pola.png";
 import cochon from "../images/pola_cochon.png";
 
-import intro from "../images/intro2.png";
+import intro from "../images/intro.png";
 import balufette from "../images/balufette.png";
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
     <>
       
       <div className="flex items-center flex-wrap gap-4 justify-center ">
-      <p className="w-1/2 h-1/4">
+      <p className="w-1/3 h-1/4">
           <Image
             src={intro}
             layout="responsive"

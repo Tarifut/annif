@@ -48,11 +48,11 @@ export default function RootLayout({ children }) {
           
           
           <ol className=" m-auto  p-4 flex  flex-row   justify-between 2xl:text-2xl lg:text-xl sm:text-lg">
-            <Link href="/accueil"  className= " transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300"><p>Accueil</p></Link>
-            <Link href="/menu"  className= " transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300"><p>Menu</p></Link>
-            <Link href="/carte"  className= " transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300"><p>Carte des boissons</p></Link>
-            <Link href="/programme"  className= "transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300" ><p>Programme</p></Link>
-            <Link href="/informations" className= "transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300" ><p>Informations</p></Link>
+            <Link prefetch href="/accueil"  className= " transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300"><p>Accueil</p></Link>
+            <Link prefetch href="/menu"  className= " transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300"><p>Menu</p></Link>
+            <Link prefetch href="/carte"  className= " transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300"><p>Carte des boissons</p></Link>
+            <Link prefetch href="/programme"  className= "transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300" ><p>Programme</p></Link>
+            <Link prefetch href="/informations" className= "transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300" ><p>Informations</p></Link>
           </ol>
         </nav>
         </section>
