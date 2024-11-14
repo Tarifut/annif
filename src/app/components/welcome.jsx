@@ -1,7 +1,6 @@
 "use client";
 
 import "../globals.css";
-//import Confetti from 'react-confetti-boom';
 
 
 import Image from "next/image";
@@ -10,8 +9,8 @@ import Image from "next/image";
 import pola from "../images/pola.png";
 import cochon from "../images/pola_cochon.png";
 
-
-
+import intro from "../images/intro2.png";
+import balufette from "../images/balufette.png";
 
 export default function Home() {
   
@@ -19,11 +18,17 @@ export default function Home() {
   return (
     <>
       
-      <h1 className="m-4 2xl:text-6xl lg:text-4xl sm:text-2xl text-center">
-        Anniversaire Adeline et Vincent
-      </h1>
-
-      
+      <div className="flex items-center flex-wrap gap-4 justify-center ">
+      <p className="w-1/2 h-1/4">
+          <Image
+            src={intro}
+            layout="responsive"
+            width={450}
+            height={450}
+            alt="intro"
+          ></Image>
+        </p>
+      </div>
 
       <div className="flex items-center flex-wrap gap-4 justify-center ">
         <p className="w-1/4 h-1/4">
@@ -36,7 +41,15 @@ export default function Home() {
           ></Image>
         </p>
 
-        
+        <p className="w-1/4 h-1/4">
+          <Image
+            src={balufette}
+            layout="responsive"
+            width={450}
+            height={450}
+            alt="balufette"
+          ></Image>
+        </p>
 
         <p className="w-1/4 h-1/4">
           <Image
@@ -50,6 +63,8 @@ export default function Home() {
 
         
       </div>
+
+      
     </>
   );
 }

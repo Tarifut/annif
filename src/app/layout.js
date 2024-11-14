@@ -17,7 +17,6 @@ const breathing = localFont({
 
 
 
-
 export default function RootLayout({ children }) {
 
   const router = useRouter()
@@ -44,14 +43,16 @@ export default function RootLayout({ children }) {
         {!showNav && <button onClick={handleEnter} className="  2xl:text-9xl lg:text-7xl sm:text-5xl text-center w-screen h-screen flex items-center justify-center"><p className=" transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300">Entrer</p></button>}
 
 {showNav && <audio autoPlay loop>
-        <source src="/music.mp3" type="audio/mpeg" />
+        <source src="/9music.mp3" type="audio/mpeg" />
       </audio>}
       
-        {showNav && <section><Confetti /><nav className="mb-24 ">
+        {showNav && <section><Confetti /><nav className="mb-8 ">
           
           
           <ol className=" m-auto  p-4 flex  flex-row   justify-between 2xl:text-2xl lg:text-xl sm:text-lg">
             <Link href="/accueil"  className= " transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300"><p>Accueil</p></Link>
+            <Link href="/menu"  className= " transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300"><p>Menu</p></Link>
+            <Link href="/carte"  className= " transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300"><p>Carte des boissons</p></Link>
             <Link href="/programme"  className= "transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300" ><p>Programme</p></Link>
             <Link href="/informations" className= "transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300" ><p>Informations</p></Link>
           </ol>
