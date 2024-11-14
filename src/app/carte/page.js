@@ -51,7 +51,7 @@ export default function Carte() {
             alt="sep"
           ></Image>
         </p>
-        <section className="text-2xl">Bière pression Mandala de la Brasserie d Olt</section>
+        <section className="text-2xl">Bière pression Mandala de la Brasserie d&rsquo;Olt</section>
         <p className="w-1/6 h-1/6">
           <Image
             src={sep}
