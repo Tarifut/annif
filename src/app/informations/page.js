@@ -49,9 +49,9 @@ export default function Informations() {
 
 
     return (
-        <div className="flex flex-col justify-center align-middle items-center font-sans text-center text-2xl gap-10">
+        <div className="flex flex-col justify-center align-middle items-center  text-center ">
 
-            <p className="w-1/3 h-1/3"><Image
+            <p className="w-100 h-100 sm:w-1/2 sm:h-1/2"><Image
                 src={infos}
                 layout="responsive"
                 width={450}
@@ -63,7 +63,7 @@ export default function Informations() {
 
             {isLoaded && (
                 <GoogleMap
-                    mapContainerStyle={{ width: "50vw", height: "25vh" }}
+                    mapContainerStyle={{ width: "90vw", height: "25vh" }}
                     center={center}
                     zoom={zoom}
                     onLoad={onLoad}
