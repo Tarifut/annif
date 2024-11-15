@@ -25,15 +25,19 @@ export default function RootLayout({ children }) {
   const [cHeight,setCHeight]=useState(0)
   const router = useRouter()
 
-  const [showNav, setshowNav] = useState(false)
-
+  const [showNav, setShowNav] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   useEffect(() => {  
-
+    const initialHeight=window.innerHeight
     router.push('/')
+
+    setIsMobile(navigator.userAgentData.mobile);
+    
     setTimeout(()=>{
-      console.log(document.getElementsByTagName('body').item(0).clientHeight)
-      
-      setCHeight(document.getElementsByTagName('body').item(0).clientHeight*window.devicePixelRatio)
+      //console.log(document.getElementsByTagName('body').item(0).clientHeight)
+      if(!isMobile){
+        setCHeight(document.getElementsByTagName('body').item(0).clientHeight)
+      }
     },300)
     
   },[showNav]);
@@ -44,7 +48,7 @@ export default function RootLayout({ children }) {
   
 
   function handleEnter(){
-    setshowNav(true)
+    setShowNav(true)
     
     }
 
@@ -55,9 +59,10 @@ export default function RootLayout({ children }) {
 
         {!showNav && <button onClick={handleEnter} className="  md:text-9xl text-5xl text-center w-screen h-screen flex items-center justify-center"><p className=" transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300">Entrer</p></button>}
 
-
+        {showNav && cHeight && !isMobile &&  <Confetti  height={cHeight}/>}
+        {showNav && cHeight && isMobile &&  <Confetti  />}
       
-        {showNav && <section>{cHeight && <Confetti  height={cHeight}/>}<nav className="mb-8 ">
+        {showNav && <section><nav className="mb-8 ">
           
           
           <ol className=" m-auto  p-4 flex  flex-row  flex-wrap justify-between 2xl:text-2xl lg:text-xl sm:text-lg gap-5">
