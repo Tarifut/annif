@@ -10,7 +10,7 @@ import pola from "../images/pola.png";
 import cochon from "../images/pola_cochon.png";
 
 import intro from "../images/intro.png";
-import balufette from "../images/balufette.png";
+import balufette from "../images/baluffette.png";
 
 
 export default function Home() {
