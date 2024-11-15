@@ -31,14 +31,18 @@ export default function RootLayout({ children }) {
     const initialHeight=window.innerHeight
     router.push('/')
 
-    setIsMobile(navigator.userAgentData.mobile);
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      setIsMobile(true)
+    }
+
+    //setIsMobile(navigator.userAgentData.mobile);
     
     setTimeout(()=>{
       //console.log(document.getElementsByTagName('body').item(0).clientHeight)
       if(!isMobile){
         setCHeight(document.getElementsByTagName('body').item(0).clientHeight)
       }
-    },300)
+    },500)
     
   },[showNav]);
   
