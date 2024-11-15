@@ -32,7 +32,8 @@ export default function RootLayout({ children }) {
     router.push('/')
     setTimeout(()=>{
       console.log(document.getElementsByTagName('body').item(0).clientHeight)
-      setCHeight(document.getElementsByTagName('body').item(0).clientHeight)
+      
+      setCHeight(document.getElementsByTagName('body').item(0).clientHeight*window.devicePixelRatio)
     },300)
     
   },[showNav]);
