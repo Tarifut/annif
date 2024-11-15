@@ -21,15 +21,25 @@ const breathing = localFont({
 
 export default function RootLayout({ children }) {
 
+
+  const [cHeight,setCHeight]=useState(0)
   const router = useRouter()
 
-  useEffect(() => {
+  const [showNav, setshowNav] = useState(false)
+
+  useEffect(() => {  
+
     router.push('/')
-  },[]);
+    setTimeout(()=>{
+      console.log(document.getElementsByTagName('body').item(0).clientHeight)
+      setCHeight(document.getElementsByTagName('body').item(0).clientHeight)
+    },300)
+    
+  },[showNav]);
   
 
 
-  const [showNav, setshowNav] = useState(false)
+ 
   
 
   function handleEnter(){
@@ -38,15 +48,15 @@ export default function RootLayout({ children }) {
     }
 
   return (
-    <html className="h-dvh 	">
+    <html >
 
-      <body className={` w-dvh 	h-dvh  bg-black text-white ${breathing.className}  antialiased overflow-x-hidden	`}>
+      <body className={`  bg-black text-white ${breathing.className}  antialiased overflow-x-hidden	`}>
 
         {!showNav && <button onClick={handleEnter} className="  md:text-9xl text-5xl text-center w-screen h-screen flex items-center justify-center"><p className=" transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300">Entrer</p></button>}
 
 
       
-        {showNav && <section><Confetti /><nav className="mb-8 ">
+        {showNav && <section>{cHeight && <Confetti  height={cHeight}/>}<nav className="mb-8 ">
           
           
           <ol className=" m-auto  p-4 flex  flex-row  flex-wrap justify-between 2xl:text-2xl lg:text-xl sm:text-lg gap-5">

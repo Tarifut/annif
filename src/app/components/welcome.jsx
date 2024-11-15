@@ -15,6 +15,8 @@ import balufette from "../images/balufette.png";
 
 export default function Home() {
   
+  
+  
 
 
   return (
