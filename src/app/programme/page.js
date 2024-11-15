@@ -1,28 +1,29 @@
 import Image from "next/image"
-import recto from "../images/recto.png";
-import verso from "../images/verso.png";
+import programme from "../images/programme.png";
+
 export default function Programme(){
 
+const styleSep="w-screen  h-screen md:w-1/2 md:h-1/2"
+
     return(
-        <div className="flex flex-row justify-center align-middle items-center font-sans text-center text-2xl gap-10">
-        <p className="w-1/4 h-1/4">
-          <Image
-            src={recto}
-            layout="responsive"
-            width={450}
-            height={450}
-            alt="Polaroid"
-          ></Image>
-        </p>
-        <p className="w-1/4 h-1/4">
-          <Image
-            src={verso}
-            layout="responsive"
-            width={450}
-            height={450}
-            alt="Polaroid"
-          ></Image>
-        </p>
+      <>
+
+  
+  <div className="flex items-center justify-center ">
+        <p className={styleSep}>
+            <Image
+              src={programme}
+              layout="responsive"
+              width={450}
+              height={450}
+              alt="carte"
+            ></Image>
+          </p>
+          
         </div>
-    )
-}
+  
+             
+          </>
+      )
+  }
+    
