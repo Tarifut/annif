@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
 
       <body className={` w-dvh 	h-dvh  bg-black text-white ${breathing.className}  antialiased overflow-x-hidden	`}>
 
-        {!showNav && <button onClick={handleEnter} className="  2xl:text-9xl lg:text-7xl sm:text-5xl text-center w-screen h-screen flex items-center justify-center"><p className=" transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300">Entrer</p></button>}
+        {!showNav && <button onClick={handleEnter} className="  md:text-9xl text-5xl text-center w-screen h-screen flex items-center justify-center"><p className=" transition ease-in-out 0 hover:-translate-y-1 hover:scale-150 duration-300">Entrer</p></button>}
 
 
       
