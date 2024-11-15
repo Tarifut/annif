@@ -19,7 +19,7 @@ export default function Home() {
     <>
       
       <div className="flex items-center flex-wrap gap-4 justify-center ">
-      <p className="w-1/3 h-1/4">
+      <p className="w-1/4 h-1/4">
           <Image
             src={intro}
             layout="responsive"
